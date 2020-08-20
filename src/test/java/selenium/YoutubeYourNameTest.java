@@ -26,17 +26,20 @@ public class YoutubeYourNameTest {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
-  @Before
+
+
   public void setUp() {
     driver = new FirefoxDriver();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
-  @After
+
+
   public void tearDown() {
     //driver.quit();
   }
-  @Test
+
+
   public void youtubeYourName() throws InterruptedException{
     driver.get("https://www.youtube.com/");
     driver.findElement(By.name("search_query")).click();
